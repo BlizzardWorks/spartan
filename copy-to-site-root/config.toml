@@ -1,7 +1,7 @@
-baseurl = "https://mysite.com/" # Change
-title = "My Site Title" # Change
+baseurl = "" # Change
+title = "" # Change
 theme = "spartan"
-author = "Firstname Lastname" # Change
+author = "" # Change
 canonifyurls = true
 paginate = 10
 
@@ -11,9 +11,9 @@ paginate = 10
 
 [params]
   # Shown in the home page
-  subtitle = "A brief description of the site's purpose" # Change
-  googleAnalytics = "UA-123456789-1" # Change
-  disqus = "disqusname" # Change
+  subtitle = "" # Change
+  googleAnalytics = "" # Change
+  disqus = "" # Change
   # CSS name for highlight.js
   highlightjs = "solarized-dark"
   # additional languages for highlight.js (for all pages)
@@ -21,8 +21,7 @@ paginate = 10
   dateFormat = "02 Jan 2006, 15:04"
 
 
-# Change
-# This is just a stock example. You should cutsomize the menu according to your preferences
+# This is just a stock example. You should customize the menu according to your preferences
 [menu]
 
   # Shown in the side menu.
