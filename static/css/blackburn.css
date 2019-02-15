@@ -1,0 +1,122 @@
+.header {
+  font-family: "Raleway", Helvetica, Arial, sans-serif
+}
+
+a {
+  color: #3b8bba;
+  text-decoration: none;
+}
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+a:visited {
+  color: #265778;
+}
+
+/* added to theme */
+
+table {
+	margin: auto
+}
+
+th { 
+  background: #333; 
+  color: #f7f7f7; 
+  font-weight: bold; 
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+td, th { 
+  padding: 10px; 
+  border: 1px solid #999; 
+  text-align: left; 
+}
+
+img, figure, figure img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+
+figure.captioned {
+  text-align: center;
+  font-size: smaller;
+  text-indent: 0;
+  border: thin silver solid;
+  margin: 0.5em;
+  padding: 0.5em;
+}
+
+code {
+	background: #e4e4e4;
+	border-radius: 3px;
+}
+
+/* ----------------------------------- */
+
+.small-print {
+  font-size: 0.8em;
+  margin: 0.6em;
+}
+
+.post-meta {
+  font-size: 90%;
+}
+
+article > footer {
+  text-align: right;
+}
+
+.prev-next-post {
+  margin-top: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.prev-next-post .prev {
+  float: left;
+  text-align: left;
+  overflow: hidden;
+}
+
+.prev-next-post .next {
+  float: right;
+  text-align: right;
+  overflow: hidden;
+}
+
+#menu .brand {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 1em;
+  letter-spacing: 0.1em;
+  text-transform: none;
+  background: transparent;
+  text-decoration: none;
+  margin: 0.5em 0;
+}
+
+#menu .pure-menu {
+  font-size: 0.9em;
+}
+
+i {
+  display: inline-block;
+  margin-right: 0.2em;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 3em;
+}
+
+.pagination a {
+  color: #265778;
+}
