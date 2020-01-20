@@ -1,4 +1,4 @@
-{{ partial "header.html" . }}
+{{ partial "header-list-pages.html" . }}
 
 <div class="header">
   <h1>{{ .Title }}</h1>
@@ -10,5 +10,10 @@
 	{{ end }}
   </ul>
 </div>
+
+{{ partial "mobile-bar-list-pages.html" . }}
+
+<!-- Site Functions -->
+<script src="{{ .Site.BaseURL }}js/site-functions-list-pages.js"></script>
 
 {{ partial "footer.html" . }}

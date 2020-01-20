@@ -8,6 +8,7 @@ paginate = 10
 [indexes]
   tag = "tags"
   category = "categories"
+  project = "projects"
 
 [params]
   # Shown in the home page
