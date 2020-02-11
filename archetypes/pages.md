@@ -1,8 +1,8 @@
 ---
 title: {{ replace .Name "-" " " | title }}
 date: {{ .Date }}
-categories: 
-tags: 
+categories: []
+tags: []
 inprogress: false
 ---
 
