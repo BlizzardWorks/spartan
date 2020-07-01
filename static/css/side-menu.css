@@ -67,7 +67,8 @@ appears on the left side of the page.
 */
 
 #menu {
-    margin-left: -170px; /* "#menu" width */
+    padding-bottom: 30px;
+	margin-left: -170px; /* "#menu" width */
     width: 170px;
     position: fixed;
     top: 0;
