@@ -23,6 +23,28 @@
   </div>
 
   <div class="pure-menu">
+	<br/>
+	<b>&nbsp Webpage</b>
+	<ul class="pure-menu-list">
+		<li class="pure-menu-item">
+			<a class="pure-menu-link" {{ printf "href=%s%s" .URL  "#" | safeHTMLAttr }}>
+				<i class='fas fa-level-up-alt fa-fw'></i>Back to Top
+			</a>
+		</li>
+		<li class="pure-menu-item">
+			<a class="pure-menu-link menu-not-bar" href="javascript:window.scrollBy(0, -document.documentElement.clientHeight);">
+				<i class='fas fa-chevron-circle-up fa-fw'></i>PgUp
+			</a>
+		</li>
+		<li class="pure-menu-item">
+			<a class="pure-menu-link menu-not-bar" href="javascript:window.scrollBy(0, document.documentElement.clientHeight);">
+				<i class='fas fa-chevron-circle-down fa-fw'></i>PgDn
+			</a>
+		</li>
+	</ul>
+  </div>
+  
+  <div class="pure-menu">
   	<br/>
 	<b>&nbsp Content</b>
     <ul class="pure-menu-list">
@@ -116,28 +138,6 @@
         </li>
       {{end}}
     </ul>
-  </div>
-  
-  <div class="pure-menu">
-	<br/>
-	<b>&nbsp Webpage</b>
-	<ul class="pure-menu-list">
-		<li class="pure-menu-item">
-			<a class="pure-menu-link" {{ printf "href=%s%s" .URL  "#" | safeHTMLAttr }}>
-				<i class='fas fa-level-up-alt fa-fw'></i>Back to Top
-			</a>
-		</li>
-		<li class="pure-menu-item">
-			<a class="pure-menu-link menu-not-bar" href="javascript:window.scrollBy(0, -document.documentElement.clientHeight);">
-				<i class='fas fa-chevron-circle-up fa-fw'></i>PgUp
-			</a>
-		</li>
-		<li class="pure-menu-item">
-			<a class="pure-menu-link menu-not-bar" href="javascript:window.scrollBy(0, document.documentElement.clientHeight);">
-				<i class='fas fa-chevron-circle-down fa-fw'></i>PgDn
-			</a>
-		</li>
-	</ul>
   </div>
   
 </div>
