@@ -23,7 +23,7 @@
   </div>
 
   <div class="pure-menu">
-	<b>&nbsp Author</b>
+	<strong>&nbsp Author</strong>
     <ul class="pure-menu-list">
       {{ range .Site.Menus.author }}
       {{ if .HasChildren }}
@@ -47,7 +47,7 @@
   
   <!--
   <div class="pure-menu">
-	<b>&nbsp Webpage</b>
+	<strong>&nbsp Webpage</strong>
 	<ul class="pure-menu-list">
 		<li class="pure-menu-item">
 			<a class="pure-menu-link" {{ printf "href=%s%s" .URL  "#" | safeHTMLAttr }}>
@@ -69,7 +69,7 @@
   -->
   
   <div class="pure-menu">
-	<b>&nbsp Content</b>
+	<strong>&nbsp Content</strong>
     <ul class="pure-menu-list">
       {{ range .Site.Menus.content }}
       {{ if .HasChildren }}
@@ -92,7 +92,7 @@
   </div>
   
   <div class="pure-menu">
-	<b>&nbsp Site</b>
+	<strong>&nbsp Site</strong>
     <ul class="pure-menu-list">
       {{ range .Site.Menus.site }}
       {{ if .HasChildren }}
@@ -115,7 +115,7 @@
   </div>
   
   <div class="pure-menu">
-	<b>&nbsp Community</b>
+	<strong>&nbsp Community</strong>
     <ul class="pure-menu-list">
       {{ range .Site.Menus.community }}
       {{ if .HasChildren }}
