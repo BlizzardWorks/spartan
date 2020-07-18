@@ -19,7 +19,7 @@ function toggleMenu() {
 
 function showMenuMobile(menu, layout) {
 	menu.style.display = "block";
-	menu.style.left = "140px";
+	menu.style.left = "170px";
 }
 
 function hideMenu(menu, layout) {
@@ -70,11 +70,11 @@ function updateBar(activeLink) {
 			tocButton.style.color = "#999";
 			tocDiv.style.backgroundColor = "#191818";
 			menuButton.innerText = "Hide";
-			menuButton.style.color = "#40e0d0";
+			menuButton.style.color = "#999900";
 			menuDiv.style.backgroundColor = "#333";
 		} else {
 			menuButton.innerText = "Hide";
-			menuButton.style.color = "#40e0d0";
+			menuButton.style.color = "#999900";
 			menuDiv.style.backgroundColor = "#333";
 		}
 	} else { // activeLink === "toc"
@@ -87,11 +87,11 @@ function updateBar(activeLink) {
 			menuButton.style.color = "#999";
 			menuDiv.style.backgroundColor = "#191818";
 			tocButton.innerText = "Hide";
-			tocButton.style.color = "#40e0d0";
+			tocButton.style.color = "#999900";
 			tocDiv.style.backgroundColor = "#333";
 		} else {
 			tocButton.innerText = "Hide";
-			tocButton.style.color = "#40e0d0";
+			tocButton.style.color = "#999900";
 			tocDiv.style.backgroundColor = "#333";
 		}
 	}
@@ -161,7 +161,7 @@ function updateTOCMenuState() {
 	// There is some weirdness with the string matching. See above.
 	if (tocToggleLink.innerHTML === '<i class="fa fa-list fa-fw"></i>Show TOC') {
 	  tocToggleLink.innerHTML = '<i class="fa fa-list fa-fw"></i>Hide TOC';
-	  tocToggleLink.style.color = "#40e0d0";
+	  tocToggleLink.style.color = "#999900";
 	  tocToggle.style.backgroundColor = "#333";
 	} else { // tocToggleLink.innerHTML === "<i class='fa fa-list fa-fw'></i>Hide TOC"
 	  tocToggleLink.innerHTML = '<i class="fa fa-list fa-fw"></i>Show TOC';
