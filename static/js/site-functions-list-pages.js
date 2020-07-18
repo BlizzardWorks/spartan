@@ -11,7 +11,7 @@ function toggleMenu() {
 
 function showMenuMobile(menu, layout) {
 	menu.style.display = "block";
-	menu.style.left = "140px";
+	menu.style.left = "170px";
 }
 
 function hideMenu(menu, layout) {
@@ -30,7 +30,7 @@ function updateBar(activeLink) {
 		menuDiv.style.backgroundColor = "#191818";
 	} else {
 		menuButton.innerText = "Hide";
-		menuButton.style.color = "#40e0d0";
+		menuButton.style.color = "#999900";
 		menuDiv.style.backgroundColor = "#333";
 	} 
 }
