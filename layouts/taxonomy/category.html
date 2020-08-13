@@ -1,11 +1,10 @@
 {{ partial "header-list-pages.html" . }}
 
-{{ .Content }}
-
 <div class="header">
   <h1>{{ .Title }}</h1>
 </div>
 <div class="content">
+  {{ .Content }}
   <ul>
     {{ range .Data.Pages.ByTitle }}
     <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
