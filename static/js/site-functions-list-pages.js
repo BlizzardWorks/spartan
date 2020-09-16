@@ -77,6 +77,20 @@ function getCookie(cname) {
   return "";
 }
 
+function displayAppropriateLists() {
+	var level=getCookie("level");
+	if(level = "higher")
+	{
+		var list = document.getElementById("higherLevelPages");
+		list.style.display = "block";
+	}
+	else if(level = "lower")
+	{
+		var list = document.getElementById("lowerLevelPages");
+		list.style.display = "block";
+	}
+}
+
 
 var trigger = window.matchMedia("(min-width: 48em)")
 // Call listener function at run time
