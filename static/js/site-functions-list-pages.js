@@ -89,6 +89,11 @@ function displayAppropriateLists() {
 		var list = document.getElementById("lowerLevelPages");
 		list.style.display = "block";
 	}
+	// if user hasn't set cookie, display higher level version
+	else { // level = ""
+		var list = document.getElementById("higherLevelPages");
+		list.style.display = "block";
+	}
 }
 
 
