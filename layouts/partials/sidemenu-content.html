@@ -29,7 +29,7 @@
 		{{ if strings.HasSuffix .URL "lower/" }}
 			<li class="pure-menu-item">
 				<a class="pure-menu-link" {{ printf "href=%s/higher/" (strings.TrimSuffix "lower/" .URL) | safeHTMLAttr }}>
-					<i class='fab fa-github fa-fw'></i>Higher level version
+					<i class='fab sort-amount-up fa-fw'></i>Higher level version
 				</a>
 			</li>
 		{{end}}
@@ -37,7 +37,7 @@
 		{{ if strings.HasSuffix .URL "higher/" }}
 			<li class="pure-menu-item">
 				<a class="pure-menu-link" {{ printf "href=%s/lower/" (strings.TrimSuffix "higher/" .URL) | safeHTMLAttr }}>
-					<i class='fab fa-github fa-fw'></i>Lower level version
+					<i class='fab sort-amount-down fa-fw'></i>Lower level version
 				</a>
 			</li>
 		{{end}}
