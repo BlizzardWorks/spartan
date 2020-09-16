@@ -79,12 +79,12 @@ function getCookie(cname) {
 
 function displayAppropriateLists() {
 	var level=getCookie("level");
-	if(level = "higher")
+	if(level == "higher")
 	{
 		var list = document.getElementById("higherLevelPages");
 		list.style.display = "block";
 	}
-	else if(level = "lower")
+	else if(level == "lower")
 	{
 		var list = document.getElementById("lowerLevelPages");
 		list.style.display = "block";
