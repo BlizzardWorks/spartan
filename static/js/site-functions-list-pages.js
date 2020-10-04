@@ -78,13 +78,13 @@ function getCookie(cname) {
 }
 
 function displayAppropriateLists() {
-	var level=getCookie("level");
-	if(level == "higher")
+	var writingLevel=getCookie("writingLevel");
+	if(writingLevel == "higher")
 	{
 		var list = document.getElementById("higherLevelPages");
 		list.style.display = "block";
 	}
-	else if(level == "lower")
+	else if(writingLevel == "lower")
 	{
 		var list = document.getElementById("lowerLevelPages");
 		list.style.display = "block";
