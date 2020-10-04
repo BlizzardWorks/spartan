@@ -15,6 +15,10 @@ nav[data-toggle='toc'] ul{
   list-style-type:none !important;
 }
 
+nav[data-toggle='toc'] > ul {
+	height: 99vh;
+}
+
 .sticky {
   position:fixed !important;
   position: absolute; /*ie6 */
@@ -102,6 +106,10 @@ nav[data-toggle='toc'] ul{
 	height: calc(100vh - 50px);
 	margin-bottom: 50px;
     width: 80%;
+  }
+  
+  nav[data-toggle='toc'] > ul {
+	height: calc(100vh - 60px);
   }
   
   .menu-not-bar {
