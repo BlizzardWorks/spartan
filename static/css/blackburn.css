@@ -2,6 +2,11 @@
   font-family: "Raleway", Helvetica, Arial, sans-serif
 }
 
+h2, h3, h4, h5, h6 {
+	margin-block-start: 16px;
+	margin-block-end: 16px;
+}
+
 h2 {
 	font-size: 2em;
 }
