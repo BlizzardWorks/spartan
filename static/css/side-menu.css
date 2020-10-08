@@ -19,7 +19,6 @@ This is the parent `<div>` that contains the menu and the content area.
 #menu {
 	left: 170px;
 	width: 170px;
-	height: 100vh;
 }
 
 	
