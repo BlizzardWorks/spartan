@@ -144,6 +144,34 @@ function getCookie(cname) {
   return "";
 }
 
+function toHigherWritingLevel() {
+	setCookie('writingLevel', 'higher', 1825);
+	displayWritingLevel();
+}
+
+function toLowerWritingLevel() {
+	setCookie('writingLevel', 'lower', 1825);
+	displayWritingLevel();
+}
+
+function displayWritingLevel() {
+	var writingLevel=getCookie("writingLevel");
+	var displayDiv = document.getElementById("writing-level-display");
+	if(writingLevel == "higher")
+	{
+		displayDiv.innerHTML = "Current writing level: Higher";
+	}
+	else if(writingLevel == "lower")
+	{
+		displayDiv.innerHTML = "Current writing level: Lower";
+	}
+	// if user hasn't set cookie, set cookie and display higher level version
+	else { // level = ""
+		setCookie('writingLevel', 'higher', 1825);
+		displayDiv.innerHTML = "Current writing level: Higher";
+	}
+}
+
 var trigger = window.matchMedia("(min-width: 48em)")
 // Call listener function at run time
 cleanupMobileInlineStyles(trigger)

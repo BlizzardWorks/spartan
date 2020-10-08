@@ -89,8 +89,9 @@ function displayAppropriateLists() {
 		var list = document.getElementById("lowerLevelPages");
 		list.style.display = "block";
 	}
-	// if user hasn't set cookie, display higher level version
+	// if user hasn't set cookie, set cookie and display higher level version
 	else { // level = ""
+		setCookie('writingLevel', 'higher', 1825);
 		var list = document.getElementById("higherLevelPages");
 		list.style.display = "block";
 	}
