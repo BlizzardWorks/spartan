@@ -97,6 +97,29 @@ function displayAppropriateLists() {
 	}
 }
 
+function adjustIframeHeight(selector, height) {
+
+	var iframe = document.querySelector('iframe.' + selector);
+	iframe.style.height = height + "px";
+	
+	document.querySelector('.' + selector + '.h300').classList.remove('active');
+	document.querySelector('.' + selector + '.h400').classList.remove('active');
+	document.querySelector('.' + selector + '.h600').classList.remove('active');
+	document.querySelector('.' + selector + '.h800').classList.remove('active');
+	
+	if (height == 300) {
+		document.querySelector('.' + selector + '.h300').classList.add('active');
+	}
+	else if (height == 400) {
+		document.querySelector('.' + selector + '.h400').classList.add('active');
+	}
+	else if (height == 600) {
+		document.querySelector('.' + selector + '.h600').classList.add('active');
+	}
+	else if (height == 800) {
+		document.querySelector('.' + selector + '.h800').classList.add('active');
+	}
+}
 
 var trigger = window.matchMedia("(min-width: 48em)")
 // Call listener function at run time
