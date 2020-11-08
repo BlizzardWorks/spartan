@@ -21,26 +21,29 @@
 					<ul>
 				{{else if (lt $thisHeaderLevel $headerLevel) }}
 					{{ range seq (sub $headerLevel $thisHeaderLevel ) }}
-						</ul>
+						</ul></li>
 					{{end}}
 					{{ $.Scratch.Set "headerLevel" $thisHeaderLevel }}
+				{{else}}
+					</li>
 				{{end}}
-				
-				<!--
-				{{ $base := ($.Page.File.LogicalName) }}
-				{{ $anchorId := ($header | plainify | htmlUnescape | anchorize) }}
-				{{ $href := delimit (slice $base $anchorId) "#" | string }}
-				-->
-				<li><a href="#{{$header | plainify | htmlUnescape | anchorize }}">{{ $header | plainify | htmlUnescape }}</a></li>
+
+				<li><a href="#{{replaceRE ".*id=\"(.*)\".*" "$1" $header }}">{{ $header | plainify | htmlUnescape }}</a>
 				
 			{{end}}
 			
-			
-			<!-- Need to add closing ul tags for as many levels as we are nested,
-				that is, however many levels deeper we are than 2 -->
 			{{ $headerLevel := (.Scratch.Get "headerLevel") }}
-			{{ range seq (sub $headerLevel 2) }}
-				</ul>
+			{{ $nestLevel := (sub $headerLevel 2) }}
+			{{if (gt $nestLevel 0) }}
+				<!-- Need to add closing ul tags for as many levels as we are 
+				nested, that is, however many levels deeper we are than 2 -->
+				{{ range seq $nestLevel }}
+					</ul></li>
+				{{end}}
+			{{else}}
+				<!-- not nested = just need to close last <li> tag that was 
+				created -->
+				</li>
 			{{end}}
 		</ul>
 	</ul>
