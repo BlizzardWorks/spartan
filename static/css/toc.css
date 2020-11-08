@@ -6,7 +6,6 @@ nav[data-toggle='toc'] {
 }
 
 nav[data-toggle='toc'] ul{
-  height: 100%;
   overflow: auto;
   margin-block-start: 0em;
   margin-block-end: 0em;
