@@ -45,6 +45,9 @@
 		<li class="pure-menu-item" id="menu-toc-toggle" >
 			<a class="pure-menu-link" href="javascript:toggleTOCFromMenu();"><i class='fas fa-list fa-fw'></i>Show TOC</a>
 		</li>
+		<li class="pure-menu-item" id="menu-scripture-display" >
+			<a class="pure-menu-link" href="javascript:toggleScriptureDisplay();"><i class='fas fa-toggle-on fa-fw'></i>Toggle embedded</a>
+		</li>
 		<li class="pure-menu-item">
 			<a class="pure-menu-link" {{ printf "href=https://github.com/StevenTammen/bibledocs.org/edit/master/content%s.md" (strings.TrimSuffix "/" .URL) | safeHTMLAttr }}>
 				<i class='fab fa-github fa-fw'></i>Edit on GitHub
