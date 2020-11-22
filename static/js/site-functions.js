@@ -157,40 +157,26 @@ trigger.addListener(cleanupMobileInlineStyles)
 function toggleTOCFromMenu() {
   var toc = document.querySelector(".sticky");
   var layout = document.getElementById("layout");
+  var tocToggleLink = document.querySelector("#menu-toc-toggle a");
+  
+  // If switching to showing TOC
   if (window.getComputedStyle(toc).display === "none") {
-	showTOCMobile(toc, layout)
+	showTOCMobile(toc, layout);
+    tocToggleLink.innerHTML = '<i class="fa fa-list fa-fw"></i>Hide TOC';
+    tocToggleLink.style.color = "#999900";
+    tocToggle.style.backgroundColor = "#333";
+	
+  // If switching to hiding TOC
   } else {
-	hideTOC(toc, layout)
+	hideTOC(toc, layout);
+	tocToggleLink.innerHTML = '<i class="fa fa-list fa-fw"></i>Show TOC';
+	tocToggleLink.style.color = "#999";
+	tocToggle.style.backgroundColor = "#191818";
   }
-  updateTOCMenuState()
 }
 
 function showTOCMenu(toc, layout) {
 	toc.style.display = "inline-block";
-}
-
-function updateTOCMenuState() {
-	var tocToggle = document.getElementById("menu-toc-toggle");
-	var tocToggleLink = document.querySelector("#menu-toc-toggle a");
-	
-	/*
-	console.log(tocToggleLink.innerHTML)
-	console.log('<i class="fa fa-list fa-fw"></i>Show TOC')
-	console.log(tocToggleLink.innerHTML === "<i class='fa fa-list fa-fw'></i>Show TOC")
-	console.log(tocToggleLink.innerHTML === '<i class="fa fa-list fa-fw"></i>Show TOC')
-	*/
-	
-	// Need to include the FA icons in the inner HTML checks. 
-	// There is some weirdness with the string matching. See above.
-	if (tocToggleLink.innerHTML === '<i class="fa fa-list fa-fw"></i>Show TOC') {
-	  tocToggleLink.innerHTML = '<i class="fa fa-list fa-fw"></i>Hide TOC';
-	  tocToggleLink.style.color = "#999900";
-	  tocToggle.style.backgroundColor = "#333";
-	} else { // tocToggleLink.innerHTML === "<i class='fa fa-list fa-fw'></i>Hide TOC"
-	  tocToggleLink.innerHTML = '<i class="fa fa-list fa-fw"></i>Show TOC';
-	  tocToggleLink.style.color = "#999";
-	  tocToggle.style.backgroundColor = "#191818";
-	}
 }
 
 function cleanupMenuInlineStyles(trigger) {
